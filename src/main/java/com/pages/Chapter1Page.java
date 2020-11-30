@@ -26,8 +26,7 @@ public class Chapter1Page extends BaseClass {
 
 	public void clickHomeLink() {
 		try {
-			$(By.linkText("Home Page")).click();
-
+			$(By.linkText("Home Page")).should(appear).click();
 		} catch (ElementNotInteractableException e) {
 			e.printStackTrace();
 		} catch (ElementNotSelectableException e) {
