@@ -24,12 +24,6 @@ public class Chapter1Page extends BaseClass {
 		PageFactory.initElements(driver, this);
 	}
 
-	public String verifyText() {
-
-		String text = $("#divontheleft").should(appear).getText();
-		return text;
-	}
-
 	public void clickHomeLink() {
 		try {
 			$(By.linkText("Home Page")).click();

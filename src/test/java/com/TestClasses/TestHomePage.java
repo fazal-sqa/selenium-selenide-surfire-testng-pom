@@ -37,9 +37,7 @@ public class TestHomePage extends BaseClass {
 	public void testNavigationChapter1ToHomePage() throws InterruptedException, IOException {
 
 		ObjHomePage.clickLinkChapter1();
-		String actualText = ObjChapter1.verifyText();
-		String expectedText = "Assert that this text is on the page";
-		Assert.assertEquals(actualText, expectedText, "Text is not correct as required!");
+		$("#divontheleft").shouldHave(text("Assert that this text is on the page"));
 		ObjChapter1.clickHomeLink();
 		$(By.linkText("Chapter1")).should(appear);
 	}
